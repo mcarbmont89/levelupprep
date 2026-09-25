@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Coaches | Level Up Prep</title>
+<meta name="description" content="Meet the Level Up Prep coaching staff. Collegiate and professional experience across basketball, volleyball, football, soccer, and baseball.">
+<!-- SHARED TOKENS — paste into every page's <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080808; --surface:#111111; --surface2:#161616; --border:#1E1E1E;
+  --white:#F9F9F8; --white2:#F0F0EE; --border-lt:#E0E0DC;
+  --gold:#D4920A; --gold-lt:#F0B429;
+  --text:#F5F5F0; --muted:#888880; --dim:#3A3A36;
+  --dk-text:#0A0A08; --dk-muted:#555550;
+  --font-h:'Oswald',system-ui,sans-serif;
+  --font-b:'Barlow',system-ui,sans-serif;
+  --font-num:'Barlow Condensed',system-ui,sans-serif;
+  --r:4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font:inherit;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+/* BAR */
+.bar{background:var(--gold);color:#0A0800;text-align:center;padding:10px 20px;font-family:var(--font-h);font-size:13px;letter-spacing:0.08em;font-weight:600;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:90;background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-h);font-size:18px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0.04em;transition:color 0.15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-cta{background:var(--gold);color:#080808;padding:8px 20px;font-family:var(--font-h);font-size:13px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.nav-cta:hover{background:var(--gold-lt);}
+@media(max-width:700px){.nav-links{display:none;}}
+
+/* BUTTONS */
+.btn-primary{background:var(--gold);color:#080808;padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--gold-lt);}
+.btn-outline{border:1px solid rgba(245,245,240,0.3);color:var(--text);padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s,color 0.15s;display:inline-block;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.btn-outline-dk{border:1px solid #C0C0BC;color:var(--dk-text);padding:12px 28px;font-family:var(--font-h);font-size:14px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s;display:inline-block;}
+.btn-outline-dk:hover{border-color:var(--gold);color:var(--gold);}
+
+/* SECTION BASICS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.sec-dk{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-surf{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-lt{background:var(--white);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);}
+.pad{padding:80px 0;}
+.pad-sm{padding:56px 0;}
+
+/* TYPE */
+.eyebrow{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.eyebrow-dk{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.h1-hero{font-family:var(--font-h);font-size:clamp(48px,9vw,88px);font-weight:700;line-height:0.9;letter-spacing:-0.01em;text-transform:uppercase;}
+.h2{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--text);}
+.h2-dk{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--dk-text);}
+.body-text{color:var(--muted);font-size:16px;line-height:1.7;max-width:480px;}
+.body-text-dk{color:var(--dk-muted);font-size:16px;line-height:1.7;max-width:480px;}
+
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.two-col.rev{direction:rtl;}
+.two-col.rev>*{direction:ltr;}
+@media(max-width:900px){.two-col,.two-col.rev{grid-template-columns:1fr;direction:ltr;gap:40px;}}
+.col-img{position:relative;overflow:hidden;}
+.col-img img{width:100%;height:460px;object-fit:cover;}
+
+/* PAGE HERO (inner pages) */
+.page-hero{padding:72px 0 64px;border-bottom:1px solid var(--border);}
+.page-hero .wrap{max-width:800px;}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 24px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:var(--font-h);font-size:16px;font-weight:700;}
+.footer-logo span{color:var(--gold);}
+.footer-copy{font-size:12px;color:var(--dim);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:var(--dim);transition:color 0.15s;}
+.footer-links a:hover{color:var(--muted);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* SISTER STRIP */
+.sister{background:var(--bg);border-top:1px solid var(--border);padding:22px 24px;text-align:center;font-size:13px;color:var(--muted);}
+.sister a{color:var(--gold);font-weight:600;}
+</style>
+<script>
+// Shared scroll reveal
+document.addEventListener('DOMContentLoaded',()=>{
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Mark active nav link
+  const path=location.pathname.replace(/\/$/,'');
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    if(a.getAttribute('href')===path||a.getAttribute('href')===path+'/') a.classList.add('active');
+  });
+});
+</script>
+
+<style>
+.coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+.coach-card{background:var(--surface2);overflow:hidden;}
+.coach-img{width:100%;height:300px;object-fit:cover;display:block;transition:transform 0.5s ease;}
+.coach-card:hover .coach-img{transform:scale(1.03);}
+.coach-img-wrap{overflow:hidden;position:relative;}
+.coach-sport{position:absolute;top:14px;right:14px;background:var(--gold);color:#080808;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:4px 12px;}
+.coach-info{padding:22px 22px 26px;}
+.coach-name{font-family:var(--font-h);font-size:20px;font-weight:700;color:var(--text);letter-spacing:0.02em;margin-bottom:8px;}
+.coach-bio{font-size:14px;color:var(--muted);line-height:1.6;}
+@media(max-width:900px){.coaches-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.coaches-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="bar">Enrolling for Fall 2027 · Admissions open November 1</div>
+<nav>
+  <a href="/" class="nav-logo">Level Up <span>Prep</span></a>
+  <ul class="nav-links">
+    <li><a href="/academics/">Academics</a></li>
+    <li><a href="/athletics/">Athletics</a></li>
+    <li><a href="/coaches/">Coaches</a></li>
+    <li><a href="/admissions/">Admissions</a></li>
+  </ul>
+  <a href="/admissions/" class="nav-cta">Book free assessment</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="sec-dk page-hero">
+  <div class="wrap">
+    <span class="eyebrow">The team behind you</span>
+    <h1 class="h1-hero" style="margin-bottom:16px;">Meet the<em style="color:var(--gold);font-style:normal;display:block;">coaches</em></h1>
+    <p class="body-text">Collegiate and professional experience across every sport we offer. Real coaches who have been where your athlete wants to go.</p>
+  </div>
+</div>
+
+<!-- COACHES GRID -->
+<div class="sec-surf">
+  <div class="wrap pad">
+    <div class="coaches-grid">
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-reid.jpg" alt="Coach Marcus Reid" loading="lazy">
+          <span class="coach-sport">Basketball</span>
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach Marcus Reid</div>
+          <p class="coach-bio">Former D1 assistant coach with 15 years developing elite guards and forwards. His athletes have gone on to play at every level from JUCO to the NBA G-League.</p>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-chen.jpg" alt="Coach Sarah Chen" loading="lazy">
+          <span class="coach-sport">Volleyball</span>
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach Sarah Chen</div>
+          <p class="coach-bio">All-Conference setter who played four years at the collegiate level before turning to coaching. She specializes in fundamentals, court vision, and game IQ development.</p>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-foster.jpg" alt="Coach James Foster" loading="lazy">
+          <span class="coach-sport">Football</span>
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach James Foster</div>
+          <p class="coach-bio">10 years coaching youth and prep football across the Coachella Valley. Coach Foster focuses on strength, technique, and developing complete athletes from the ground up.</p>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-torres.jpg" alt="Coach Maria Torres" loading="lazy">
+          <span class="coach-sport">Soccer</span>
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach Maria Torres</div>
+          <p class="coach-bio">Former professional player with experience in multiple leagues. Coach Torres develops complete midfielders and defenders with a technical, game-intelligence-first approach.</p>
+        </div>
+      </div>
+      <div class="coach-card reveal">
+        <div class="coach-img-wrap">
+          <img class="coach-img" src="https://pub-BUCKET_URL/prep/academics.jpg" alt="Coach David Park" loading="lazy">
+          <span class="coach-sport">Baseball</span>
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach David Park</div>
+          <p class="coach-bio">Collegiate pitching coach with a track record of developing D1 arms. Coach Park's program covers mechanics, arm care, mental preparation, and position-specific skill development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sec-lt">
+  <div class="wrap pad-sm">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;" class="reveal">
+      <div>
+        <span class="eyebrow-dk">Next step</span>
+        <h2 class="h2-dk" style="margin-bottom:12px;">Come meet them in person</h2>
+        <p class="body-text-dk">A free assessment is your chance to meet the coaching staff, see the facility, and ask every question before you commit to anything.</p>
+      </div>
+      <a href="/admissions/" class="btn-primary" style="flex-shrink:0;">Book a free assessment</a>
+    </div>
+  </div>
+</div>
+
+<div class="sister">
+  A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Level Up <span>Prep</span></div>
+    <div class="footer-links">
+      <a href="/academics/">Academics</a>
+      <a href="/athletics/">Athletics</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/admissions/">Admissions</a>
+    </div>
+    <div class="footer-copy">© 2026 Level Up Prep · Indio, California</div>
+  </div>
+</footer>
+</body>
+</html>

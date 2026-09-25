@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Admissions | Level Up Prep</title>
+<meta name="description" content="Admissions open November 1 for the 2027/28 school year. Start with a free assessment — meet the coaches, tour the facility, and find out if Level Up Prep is the right fit.">
+<!-- SHARED TOKENS — paste into every page's <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080808; --surface:#111111; --surface2:#161616; --border:#1E1E1E;
+  --white:#F9F9F8; --white2:#F0F0EE; --border-lt:#E0E0DC;
+  --gold:#D4920A; --gold-lt:#F0B429;
+  --text:#F5F5F0; --muted:#888880; --dim:#3A3A36;
+  --dk-text:#0A0A08; --dk-muted:#555550;
+  --font-h:'Oswald',system-ui,sans-serif;
+  --font-b:'Barlow',system-ui,sans-serif;
+  --font-num:'Barlow Condensed',system-ui,sans-serif;
+  --r:4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font:inherit;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+/* BAR */
+.bar{background:var(--gold);color:#0A0800;text-align:center;padding:10px 20px;font-family:var(--font-h);font-size:13px;letter-spacing:0.08em;font-weight:600;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:90;background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-h);font-size:18px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0.04em;transition:color 0.15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-cta{background:var(--gold);color:#080808;padding:8px 20px;font-family:var(--font-h);font-size:13px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.nav-cta:hover{background:var(--gold-lt);}
+@media(max-width:700px){.nav-links{display:none;}}
+
+/* BUTTONS */
+.btn-primary{background:var(--gold);color:#080808;padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--gold-lt);}
+.btn-outline{border:1px solid rgba(245,245,240,0.3);color:var(--text);padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s,color 0.15s;display:inline-block;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.btn-outline-dk{border:1px solid #C0C0BC;color:var(--dk-text);padding:12px 28px;font-family:var(--font-h);font-size:14px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s;display:inline-block;}
+.btn-outline-dk:hover{border-color:var(--gold);color:var(--gold);}
+
+/* SECTION BASICS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.sec-dk{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-surf{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-lt{background:var(--white);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);}
+.pad{padding:80px 0;}
+.pad-sm{padding:56px 0;}
+
+/* TYPE */
+.eyebrow{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.eyebrow-dk{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.h1-hero{font-family:var(--font-h);font-size:clamp(48px,9vw,88px);font-weight:700;line-height:0.9;letter-spacing:-0.01em;text-transform:uppercase;}
+.h2{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--text);}
+.h2-dk{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--dk-text);}
+.body-text{color:var(--muted);font-size:16px;line-height:1.7;max-width:480px;}
+.body-text-dk{color:var(--dk-muted);font-size:16px;line-height:1.7;max-width:480px;}
+
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.two-col.rev{direction:rtl;}
+.two-col.rev>*{direction:ltr;}
+@media(max-width:900px){.two-col,.two-col.rev{grid-template-columns:1fr;direction:ltr;gap:40px;}}
+.col-img{position:relative;overflow:hidden;}
+.col-img img{width:100%;height:460px;object-fit:cover;}
+
+/* PAGE HERO (inner pages) */
+.page-hero{padding:72px 0 64px;border-bottom:1px solid var(--border);}
+.page-hero .wrap{max-width:800px;}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 24px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:var(--font-h);font-size:16px;font-weight:700;}
+.footer-logo span{color:var(--gold);}
+.footer-copy{font-size:12px;color:var(--dim);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:var(--dim);transition:color 0.15s;}
+.footer-links a:hover{color:var(--muted);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* SISTER STRIP */
+.sister{background:var(--bg);border-top:1px solid var(--border);padding:22px 24px;text-align:center;font-size:13px;color:var(--muted);}
+.sister a{color:var(--gold);font-weight:600;}
+</style>
+<script>
+// Shared scroll reveal
+document.addEventListener('DOMContentLoaded',()=>{
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Mark active nav link
+  const path=location.pathname.replace(/\/$/,'');
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    if(a.getAttribute('href')===path||a.getAttribute('href')===path+'/') a.classList.add('active');
+  });
+});
+</script>
+
+<style>
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative;}
+.timeline::before{content:'';position:absolute;top:20px;left:12%;right:12%;height:1px;background:var(--border);}
+.tl-step{padding:0 14px;text-align:center;position:relative;}
+.tl-dot{width:40px;height:40px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:var(--font-num);font-size:14px;font-weight:700;color:var(--gold);position:relative;z-index:1;}
+.tl-when{font-size:11px;color:var(--gold-lt);font-weight:600;letter-spacing:0.05em;margin-bottom:6px;display:block;}
+.tl-what{font-family:var(--font-h);font-size:14px;font-weight:600;color:var(--text);letter-spacing:0.03em;margin-bottom:6px;}
+.tl-desc{font-size:12px;color:var(--muted);line-height:1.5;}
+@media(max-width:700px){.timeline{grid-template-columns:1fr 1fr;gap:32px;}.timeline::before{display:none;}}
+
+.form-card{background:var(--surface);border:1px solid var(--border);padding:40px 36px;max-width:600px;margin:0 auto;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-field{margin-bottom:16px;}
+label{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0.05em;margin-bottom:8px;}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:12px 14px;font-family:var(--font-b);font-size:14px;outline:none;transition:border-color 0.15s;}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);}
+select option{background:var(--bg);}
+textarea{resize:vertical;}
+</style>
+</head>
+<body>
+
+<div class="bar">Enrolling for Fall 2027 · Admissions open November 1</div>
+<nav>
+  <a href="/" class="nav-logo">Level Up <span>Prep</span></a>
+  <ul class="nav-links">
+    <li><a href="/academics/">Academics</a></li>
+    <li><a href="/athletics/">Athletics</a></li>
+    <li><a href="/coaches/">Coaches</a></li>
+    <li><a href="/admissions/">Admissions</a></li>
+  </ul>
+  <a href="#form" class="nav-cta">Apply now</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="sec-dk page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Class of 2027/28</span>
+    <h1 class="h1-hero" style="margin-bottom:16px;">Admissions</h1>
+    <p class="body-text">Start with a free assessment. Meet the coaches, see the classrooms, and find out if Level Up Prep is the right fit for your student-athlete. No commitment required.</p>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="sec-surf">
+  <div class="wrap pad">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 16px;">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2" style="margin-bottom:12px;">From interest to enrolled</h2>
+      <p class="body-text" style="margin:0 auto;">Admissions open November 1 for the 2027/28 school year. Four steps to secure your student's place.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-step">
+        <div class="tl-dot">1</div>
+        <span class="tl-when">Now open</span>
+        <div class="tl-what">Free assessment</div>
+        <p class="tl-desc">Visit the facility, meet the coaches and faculty, get an academic and athletic evaluation.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">2</div>
+        <span class="tl-when">Nov 1, 2026</span>
+        <div class="tl-what">Applications open</div>
+        <p class="tl-desc">Complete your application for the 2027/28 school year. Grades 5–12 accepted.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">3</div>
+        <span class="tl-when">Jan 2027</span>
+        <div class="tl-what">Decisions sent</div>
+        <p class="tl-desc">Acceptance decisions and financial assistance information sent to families.</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-dot">4</div>
+        <span class="tl-when">Aug 2027</span>
+        <div class="tl-what">First day</div>
+        <p class="tl-desc">Classes begin. Academics 8 AM–1 PM, athletic development each afternoon.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="sec-lt" id="form">
+  <div class="wrap pad">
+    <div class="reveal" style="text-align:center;max-width:500px;margin:0 auto 40px;">
+      <span class="eyebrow-dk">Get started</span>
+      <h2 class="h2-dk" style="margin-bottom:12px;">Express interest</h2>
+      <p class="body-text-dk" style="margin:0 auto;">Tell us about your student-athlete. Amy will follow up within one school day.</p>
+    </div>
+    <div class="form-card reveal">
+      <form id="prepForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div>
+            <label>Parent name</label>
+            <input type="text" name="parentName" required placeholder="Your name">
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" name="parentEmail" required placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Student name</label>
+            <input type="text" name="firstName" required placeholder="Student's name">
+          </div>
+          <div>
+            <label>Current grade</label>
+            <select name="grade" required>
+              <option value="" disabled selected>Select grade</option>
+              <option value="4">4th (entering 5th)</option>
+              <option value="5">5th</option>
+              <option value="6">6th</option>
+              <option value="7">7th</option>
+              <option value="8">8th</option>
+              <option value="9">9th</option>
+              <option value="10">10th</option>
+              <option value="11">11th</option>
+              <option value="12">12th</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Sport(s) and anything else we should know</label>
+          <textarea name="notes" rows="3" placeholder="Basketball, GPA 3.8, interested in starting 5th grade..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;text-align:center;padding:16px;font-size:16px;" id="submitBtn">Send — Amy will be in touch</button>
+        <p style="text-align:center;font-size:12px;color:var(--dim);margin-top:12px;">No commitment required · Information stays private</p>
+      </form>
+      <div id="formSuccess" style="display:none;text-align:center;padding:32px 0;">
+        <div style="font-size:40px;margin-bottom:16px;">✓</div>
+        <h4 style="font-family:var(--font-h);font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text);">We got it. Thank you.</h4>
+        <p style="color:var(--muted);font-size:14px;">Amy will reach out to <span id="confirmEmail" style="color:var(--gold-lt);"></span> within one school day.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div style="display:flex;gap:40px;justify-content:center;margin-top:40px;flex-wrap:wrap;" class="reveal">
+      <a href="mailto:amy@levelupprep.org" style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--dk-muted);font-size:13px;font-weight:500;transition:color 0.15s;" onmouseover="this.style.color='#D4920A'" onmouseout="this.style.color=''">
+        <div style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-lt);display:flex;align-items:center;justify-content:center;font-size:16px;">✉</div>
+        amy@levelupprep.org
+      </a>
+      <a href="tel:+17603912445" style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--dk-muted);font-size:13px;font-weight:500;transition:color 0.15s;" onmouseover="this.style.color='#D4920A'" onmouseout="this.style.color=''">
+        <div style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-lt);display:flex;align-items:center;justify-content:center;font-size:16px;">☎</div>
+        (760) 391-2445
+      </a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--dk-muted);font-size:13px;font-weight:500;">
+        <div style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-lt);display:flex;align-items:center;justify-content:center;font-size:16px;">📍</div>
+        Indio, California
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sister">
+  A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Level Up <span>Prep</span></div>
+    <div class="footer-links">
+      <a href="/academics/">Academics</a>
+      <a href="/athletics/">Athletics</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/admissions/">Admissions</a>
+    </div>
+    <div class="footer-copy">© 2026 Level Up Prep · Indio, California</div>
+  </div>
+</footer>
+
+<script>
+async function submitForm(e){
+  e.preventDefault();
+  const form=e.target;
+  const btn=document.getElementById('submitBtn');
+  btn.textContent='Sending...';btn.disabled=true;
+  const data={parentName:form.parentName.value,parentEmail:form.parentEmail.value,firstName:form.firstName.value,grade:form.grade.value,notes:form.notes.value};
+  try{
+    const res=await fetch('/api/prep/inquiries',{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':crypto.randomUUID()},body:JSON.stringify(data)});
+    if(res.ok||res.status===201){form.style.display='none';document.getElementById('confirmEmail').textContent=data.parentEmail;document.getElementById('formSuccess').style.display='block';}
+    else{const err=await res.json().catch(()=>({}));btn.textContent=err.error||'Something went wrong, please try again';btn.disabled=false;}
+  }catch{btn.textContent='Could not connect, please try again';btn.disabled=false;}
+}
+</script>
+</body>
+</html>

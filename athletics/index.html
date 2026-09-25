@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Athletics | Level Up Prep</title>
+<meta name="description" content="Elite sport-specific development every afternoon at Level Up Prep. Basketball, volleyball, football, soccer, and baseball coached by collegiate and professional veterans in Indio, CA.">
+<!-- SHARED TOKENS — paste into every page's <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080808; --surface:#111111; --surface2:#161616; --border:#1E1E1E;
+  --white:#F9F9F8; --white2:#F0F0EE; --border-lt:#E0E0DC;
+  --gold:#D4920A; --gold-lt:#F0B429;
+  --text:#F5F5F0; --muted:#888880; --dim:#3A3A36;
+  --dk-text:#0A0A08; --dk-muted:#555550;
+  --font-h:'Oswald',system-ui,sans-serif;
+  --font-b:'Barlow',system-ui,sans-serif;
+  --font-num:'Barlow Condensed',system-ui,sans-serif;
+  --r:4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font:inherit;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+/* BAR */
+.bar{background:var(--gold);color:#0A0800;text-align:center;padding:10px 20px;font-family:var(--font-h);font-size:13px;letter-spacing:0.08em;font-weight:600;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:90;background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:var(--font-h);font-size:18px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0.04em;transition:color 0.15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-cta{background:var(--gold);color:#080808;padding:8px 20px;font-family:var(--font-h);font-size:13px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.nav-cta:hover{background:var(--gold-lt);}
+@media(max-width:700px){.nav-links{display:none;}}
+
+/* BUTTONS */
+.btn-primary{background:var(--gold);color:#080808;padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--gold-lt);}
+.btn-outline{border:1px solid rgba(245,245,240,0.3);color:var(--text);padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s,color 0.15s;display:inline-block;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.btn-outline-dk{border:1px solid #C0C0BC;color:var(--dk-text);padding:12px 28px;font-family:var(--font-h);font-size:14px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s;display:inline-block;}
+.btn-outline-dk:hover{border-color:var(--gold);color:var(--gold);}
+
+/* SECTION BASICS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.sec-dk{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-surf{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sec-lt{background:var(--white);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);}
+.pad{padding:80px 0;}
+.pad-sm{padding:56px 0;}
+
+/* TYPE */
+.eyebrow{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.eyebrow-dk{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
+.h1-hero{font-family:var(--font-h);font-size:clamp(48px,9vw,88px);font-weight:700;line-height:0.9;letter-spacing:-0.01em;text-transform:uppercase;}
+.h2{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--text);}
+.h2-dk{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--dk-text);}
+.body-text{color:var(--muted);font-size:16px;line-height:1.7;max-width:480px;}
+.body-text-dk{color:var(--dk-muted);font-size:16px;line-height:1.7;max-width:480px;}
+
+/* TWO-COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.two-col.rev{direction:rtl;}
+.two-col.rev>*{direction:ltr;}
+@media(max-width:900px){.two-col,.two-col.rev{grid-template-columns:1fr;direction:ltr;gap:40px;}}
+.col-img{position:relative;overflow:hidden;}
+.col-img img{width:100%;height:460px;object-fit:cover;}
+
+/* PAGE HERO (inner pages) */
+.page-hero{padding:72px 0 64px;border-bottom:1px solid var(--border);}
+.page-hero .wrap{max-width:800px;}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 24px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:var(--font-h);font-size:16px;font-weight:700;}
+.footer-logo span{color:var(--gold);}
+.footer-copy{font-size:12px;color:var(--dim);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:var(--dim);transition:color 0.15s;}
+.footer-links a:hover{color:var(--muted);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* SISTER STRIP */
+.sister{background:var(--bg);border-top:1px solid var(--border);padding:22px 24px;text-align:center;font-size:13px;color:var(--muted);}
+.sister a{color:var(--gold);font-weight:600;}
+</style>
+<script>
+// Shared scroll reveal
+document.addEventListener('DOMContentLoaded',()=>{
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  // Mark active nav link
+  const path=location.pathname.replace(/\/$/,'');
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    if(a.getAttribute('href')===path||a.getAttribute('href')===path+'/') a.classList.add('active');
+  });
+});
+</script>
+
+<style>
+.sports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
+.sport-card{background:var(--surface2);padding:32px 28px;border-top:2px solid transparent;transition:border-color 0.2s;}
+.sport-card:hover{border-color:var(--gold);}
+.sport-icon{font-size:32px;margin-bottom:14px;}
+.sport-name{font-family:var(--font-h);font-size:20px;font-weight:700;color:var(--text);letter-spacing:0.03em;margin-bottom:8px;}
+.sport-desc{font-size:14px;color:var(--muted);line-height:1.6;}
+@media(max-width:700px){.sports-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="bar">Enrolling for Fall 2027 · Admissions open November 1</div>
+<nav>
+  <a href="/" class="nav-logo">Level Up <span>Prep</span></a>
+  <ul class="nav-links">
+    <li><a href="/academics/">Academics</a></li>
+    <li><a href="/athletics/">Athletics</a></li>
+    <li><a href="/coaches/">Coaches</a></li>
+    <li><a href="/admissions/">Admissions</a></li>
+  </ul>
+  <a href="/admissions/" class="nav-cta">Book free assessment</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="sec-dk page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Every afternoon</span>
+    <h1 class="h1-hero" style="margin-bottom:16px;">Elite<em style="color:var(--gold);font-style:normal;display:block;">athletics</em></h1>
+    <p class="body-text">Sport-specific development every afternoon, coached by veterans with collegiate and professional experience. The same methodology that produced the Coachella Valley's best players.</p>
+  </div>
+</div>
+
+<!-- SPORTS -->
+<div class="sec-surf">
+  <div class="wrap pad">
+    <div class="reveal">
+      <span class="eyebrow">Multi-sport programming</span>
+      <h2 class="h2" style="margin-bottom:8px;">Built around your game</h2>
+      <p class="body-text" style="margin-top:12px;">Every sport has its own dedicated coaching staff and development curriculum. Athletes focus on their primary sport while building the athleticism and mindset that transfers across all competition.</p>
+    </div>
+    <div class="sports-grid reveal">
+      <div class="sport-card">
+        <div class="sport-icon">🏀</div>
+        <div class="sport-name">Basketball</div>
+        <p class="sport-desc">The flagship sport of the Level Up family. Same hands-on methodology from Level Up Hoops Academy — ball handling, shooting, IQ, and elite guard/forward development.</p>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">🏐</div>
+        <div class="sport-name">Volleyball</div>
+        <p class="sport-desc">Fundamentals-first approach with a focus on setting, attacking, and game IQ. Led by a former All-Conference collegiate player.</p>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">🏈</div>
+        <div class="sport-name">Football</div>
+        <p class="sport-desc">Youth and prep football development focused on strength, technique, and position-specific skills from a coach with 10+ years of experience.</p>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">⚽</div>
+        <div class="sport-name">Soccer</div>
+        <p class="sport-desc">Complete player development for midfielders and defenders led by a former professional player, with a focus on technical skills and tactical awareness.</p>
+      </div>
+      <div class="sport-card">
+        <div class="sport-icon">⚾</div>
+        <div class="sport-name">Baseball</div>
+        <p class="sport-desc">Pitching and positional development with a collegiate coach known for developing D1 arms. Arm care, mechanics, and mental preparation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<div class="sec-lt">
+  <div class="wrap pad">
+    <div class="two-col">
+      <div class="col-img reveal">
+        <img src="https://pub-BUCKET_URL/prep/coach-foster.jpg" alt="Athletes training at Level Up Prep" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow-dk">The daily structure</span>
+        <h2 class="h2-dk" style="margin-bottom:16px;">Mornings for the mind. Afternoons for the game.</h2>
+        <p class="body-text-dk" style="margin-bottom:24px;">Academics run from 8 AM to 1 PM every weekday. From 1 PM onward, student-athletes shift to sport-specific training with their coaching staff.</p>
+        <p class="body-text-dk">This structure means athletes get full academic preparation without sacrificing training volume. No more choosing between school and sport.</p>
+        <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:var(--white2);padding:16px 18px;border-left:2px solid var(--gold);">
+            <div style="font-family:var(--font-h);font-size:14px;font-weight:600;color:var(--dk-text);margin-bottom:4px;">8:00 AM – 1:00 PM</div>
+            <div style="font-size:13px;color:var(--dk-muted);">Academic classes</div>
+          </div>
+          <div style="background:var(--white2);padding:16px 18px;border-left:2px solid var(--gold);">
+            <div style="font-family:var(--font-h);font-size:14px;font-weight:600;color:var(--dk-text);margin-bottom:4px;">1:00 PM onward</div>
+            <div style="font-size:13px;color:var(--dk-muted);">Athletic development</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sec-dk">
+  <div class="wrap pad-sm" style="text-align:center;">
+    <h2 class="h2 reveal" style="margin-bottom:14px;">See the coaching staff</h2>
+    <p class="body-text reveal" style="margin:0 auto 28px;">Meet the coaches behind the program before you commit to anything.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="reveal">
+      <a href="/coaches/" class="btn-primary">Meet the coaches</a>
+      <a href="/admissions/" class="btn-outline">Book a free assessment</a>
+    </div>
+  </div>
+</div>
+
+<div class="sister">
+  A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Level Up <span>Prep</span></div>
+    <div class="footer-links">
+      <a href="/academics/">Academics</a>
+      <a href="/athletics/">Athletics</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/admissions/">Admissions</a>
+    </div>
+    <div class="footer-copy">© 2026 Level Up Prep · Indio, California</div>
+  </div>
+</footer>
+</body>
+</html>
