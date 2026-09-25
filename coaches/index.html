@@ -4,236 +4,271 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Coaches | Level Up Prep</title>
-<meta name="description" content="Meet the Level Up Prep coaching staff. Collegiate and professional experience across basketball, volleyball, football, soccer, and baseball.">
-<!-- SHARED TOKENS — paste into every page's <head> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Meet the Level Up Prep coaching staff — collegiate and professional experience across every sport.">
 <style>
+/* ── LEVEL UP PREP — tokens idénticos a Hoops, naranja → dorado ── */
 :root {
-  --bg:#080808; --surface:#111111; --surface2:#161616; --border:#1E1E1E;
-  --white:#F9F9F8; --white2:#F0F0EE; --border-lt:#E0E0DC;
-  --gold:#D4920A; --gold-lt:#F0B429;
-  --text:#F5F5F0; --muted:#888880; --dim:#3A3A36;
-  --dk-text:#0A0A08; --dk-muted:#555550;
-  --font-h:'Oswald',system-ui,sans-serif;
-  --font-b:'Barlow',system-ui,sans-serif;
-  --font-num:'Barlow Condensed',system-ui,sans-serif;
-  --r:4px;
+  --ink:       #111111;
+  --ink-soft:  #191919;
+  --gold:      #C68A00;
+  --gold-lt:   #E0A020;
+  --paper:     #f6f6f3;
+  --white:     #fff;
+  --muted:     #ababab;
+  --line:      #333;
+  --line-lt:   #e5e5e0;
+  --radius:    5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  background: var(--ink);
+  font-synthesis: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:var(--font-b);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-button{cursor:pointer;border:none;background:none;font:inherit;}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; object-fit: cover; }
+p { line-height: 1.65; margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 600; }
+h2 { font-size: clamp(2.1rem, 3.65vw, 3.45rem); letter-spacing: -.055em; line-height: 1.09; }
+h3 { font-size: 1.27rem; letter-spacing: -.025em; line-height: 1.3; }
 
-/* BAR */
-.bar{background:var(--gold);color:#0A0800;text-align:center;padding:10px 20px;font-family:var(--font-h);font-size:13px;letter-spacing:0.08em;font-weight:600;}
+/* LAYOUT */
+.wrap { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
+.section-space { padding-block: 88px; }
+.section-light { background: var(--paper); color: var(--ink); }
+.section-light .eyebrow { color: #7a4800; }
+.section-light h2 { color: var(--ink); }
+.section-light p { color: #5c5c59; }
+.section-surf { background: var(--ink-soft); }
+
+/* EYEBROW */
+.eyebrow { font-size: .75rem; letter-spacing: .14em; font-weight: 600; color: var(--gold-lt); line-height: 1.6; margin-bottom: 20px; text-transform: uppercase; display: block; }
+.section-intro { font-size: 1.1rem; line-height: 1.72; color: #bababa; margin: 22px 0; max-width: 520px; }
+
+/* BUTTONS — same as Hoops */
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 20px; min-height: 54px; padding: 16px 22px; border: 1px solid var(--gold); border-radius: var(--radius); background: var(--gold); color: #111; font-size: .925rem; font-weight: 600; line-height: 1.3; transition: background .18s, border-color .18s, transform .18s; }
+.button:hover { background: var(--gold-lt); border-color: var(--gold-lt); transform: translateY(-2px); }
+.button-outline { background: transparent; color: var(--white); border-color: #d3d3ce; }
+.button-outline:hover { background: #1a1a1a; border-color: #1a1a1a; transform: none; }
+.button-dk { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.button-dk:hover { background: #222; border-color: #222; }
+.text-link { display: inline-flex; align-items: center; gap: 14px; font-size: .9rem; font-weight: 600; }
+.text-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.gold { color: var(--gold-lt); }
 
 /* NAV */
-nav{position:sticky;top:0;z-index:90;background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-.nav-logo{font-family:var(--font-h);font-size:18px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;}
-.nav-logo span{color:var(--gold);}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0.04em;transition:color 0.15s;}
-.nav-links a:hover,.nav-links a.active{color:var(--text);}
-.nav-cta{background:var(--gold);color:#080808;padding:8px 20px;font-family:var(--font-h);font-size:13px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
-.nav-cta:hover{background:var(--gold-lt);}
-@media(max-width:700px){.nav-links{display:none;}}
+nav.site-nav { position: sticky; top: 0; z-index: 90; background: var(--ink); border-bottom: 1px solid #292929; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 40px; height: 64px; }
+.nav-brand { display: flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 600; letter-spacing: .06em; line-height: 1.35; }
+.nav-brand small { display: block; color: #999; font-size: .7rem; letter-spacing: .13em; font-weight: 400; }
+.nav-links-list { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.nav-links-list a { font-size: .84rem; color: #c5c5c5; transition: color .15s; }
+.nav-links-list a:hover, .nav-links-list a.active { color: var(--gold-lt); }
+@media (max-width: 700px) { .nav-links-list { display: none; } nav.site-nav { padding: 0 20px; } }
 
-/* BUTTONS */
-.btn-primary{background:var(--gold);color:#080808;padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:background 0.15s;display:inline-block;}
-.btn-primary:hover{background:var(--gold-lt);}
-.btn-outline{border:1px solid rgba(245,245,240,0.3);color:var(--text);padding:14px 32px;font-family:var(--font-h);font-size:15px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s,color 0.15s;display:inline-block;}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
-.btn-outline-dk{border:1px solid #C0C0BC;color:var(--dk-text);padding:12px 28px;font-family:var(--font-h);font-size:14px;font-weight:600;letter-spacing:0.06em;border-radius:var(--r);transition:border-color 0.15s;display:inline-block;}
-.btn-outline-dk:hover{border-color:var(--gold);color:var(--gold);}
-
-/* SECTION BASICS */
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
-.sec-dk{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.sec-surf{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.sec-lt{background:var(--white);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);}
-.pad{padding:80px 0;}
-.pad-sm{padding:56px 0;}
-
-/* TYPE */
-.eyebrow{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
-.eyebrow-dk{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:0.08em;display:block;margin-bottom:14px;}
-.h1-hero{font-family:var(--font-h);font-size:clamp(48px,9vw,88px);font-weight:700;line-height:0.9;letter-spacing:-0.01em;text-transform:uppercase;}
-.h2{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--text);}
-.h2-dk{font-family:var(--font-h);font-size:clamp(28px,4vw,48px);font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;line-height:1;color:var(--dk-text);}
-.body-text{color:var(--muted);font-size:16px;line-height:1.7;max-width:480px;}
-.body-text-dk{color:var(--dk-muted);font-size:16px;line-height:1.7;max-width:480px;}
+/* ANNOUNCEMENT BAR */
+.bar { background: var(--gold); color: #0a0500; text-align: center; padding: 10px 20px; font-size: .8rem; font-weight: 600; letter-spacing: .07em; }
 
 /* TWO-COL */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.two-col.rev{direction:rtl;}
-.two-col.rev>*{direction:ltr;}
-@media(max-width:900px){.two-col,.two-col.rev{grid-template-columns:1fr;direction:ltr;gap:40px;}}
-.col-img{position:relative;overflow:hidden;}
-.col-img img{width:100%;height:460px;object-fit:cover;}
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.two-col.rev { direction: rtl; }
+.two-col.rev > * { direction: ltr; }
+@media (max-width: 860px) { .two-col, .two-col.rev { grid-template-columns: 1fr; direction: ltr; gap: 36px; } }
+.col-img { overflow: hidden; border-radius: 4px; }
+.col-img img { width: 100%; height: 440px; object-fit: cover; transition: transform .6s ease; }
+.col-img:hover img { transform: scale(1.03); }
+
+/* STAT ROW */
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-lt); padding-top: 24px; margin-top: 4px; gap: 0; }
+.section-light .stat-row { border-color: #d8d8d2; }
+.stat-num { font-size: 2.4rem; font-weight: 600; letter-spacing: -.04em; color: var(--gold); line-height: 1; }
+.stat-label { font-size: .75rem; color: #888; margin-top: 5px; line-height: 1.4; }
+.section-light .stat-label { color: #6a6a66; }
+
+/* PILLAR GRID */
+.pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 28px; }
+.pillar { background: #191919; padding: 22px 24px; border-left: 2px solid var(--gold); }
+.section-light .pillar { background: #ebebе7; border-left-color: var(--gold); }
+.pillar-name { font-size: 1rem; font-weight: 600; letter-spacing: -.015em; margin-bottom: 5px; }
+.section-light .pillar-name { color: var(--ink); }
+.pillar-desc { font-size: .85rem; color: var(--muted); line-height: 1.55; }
+.section-light .pillar-desc { color: #636360; }
+
+/* COACHES SCROLL */
+.coaches-scroll { display: flex; gap: 18px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; scroll-snap-type: x mandatory; margin-top: 36px; }
+.coaches-scroll::-webkit-scrollbar { display: none; }
+.coach-card { flex-shrink: 0; width: 256px; background: #191919; border: 1px solid #2a2a2a; border-radius: 4px; overflow: hidden; scroll-snap-align: start; transition: border-color .2s; }
+.coach-card:hover { border-color: rgba(192,138,0,.5); }
+.coach-img { width: 100%; height: 230px; object-fit: cover; display: block; transition: transform .5s ease; }
+.coach-card:hover .coach-img { transform: scale(1.03); }
+.coach-body { padding: 18px 18px 20px; }
+.coach-sport { display: inline-block; background: var(--gold); color: #0a0500; font-size: .68rem; font-weight: 700; letter-spacing: .08em; padding: 3px 10px; margin-bottom: 8px; }
+.coach-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -.015em; margin-bottom: 6px; }
+.coach-bio { font-size: .82rem; color: var(--muted); line-height: 1.58; }
+.scroll-controls { display: flex; gap: 8px; margin-top: 16px; }
+.scroll-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); color: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: border-color .15s, color .15s; }
+.scroll-btn:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+/* TIMELINE */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; margin-top: 44px; }
+.timeline::before { content: ''; position: absolute; top: 19px; left: 12%; right: 12%; height: 1px; background: var(--line); }
+.tl-step { padding: 0 12px; text-align: center; position: relative; }
+.tl-dot { width: 38px; height: 38px; border-radius: 50%; background: var(--ink); border: 2px solid var(--gold); margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; color: var(--gold-lt); position: relative; z-index: 1; }
+.section-light .tl-dot { background: var(--paper); }
+.tl-when { font-size: .72rem; color: var(--gold-lt); font-weight: 600; letter-spacing: .05em; margin-bottom: 5px; display: block; }
+.section-light .tl-when { color: #7a4800; }
+.tl-what { font-size: .88rem; font-weight: 600; letter-spacing: -.01em; margin-bottom: 5px; }
+.section-light .tl-what { color: var(--ink); }
+.tl-desc { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+.section-light .tl-desc { color: #636360; }
+@media (max-width: 700px) { .timeline { grid-template-columns: 1fr 1fr; gap: 28px; } .timeline::before { display: none; } }
+
+/* FORM */
+.form-card { background: #191919; border: 1px solid #2a2a2a; padding: 36px 32px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.field { margin-bottom: 14px; }
+label { display: block; font-size: .75rem; font-weight: 600; color: #888; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 7px; }
+input, select, textarea { width: 100%; background: var(--ink); border: 1px solid var(--line); color: var(--white); padding: 11px 13px; font-size: .9rem; outline: none; transition: border-color .15s; border-radius: 3px; }
+input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+select option { background: var(--ink); }
+textarea { resize: vertical; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+/* IMPACT BAND */
+.impact-band { display: grid; grid-template-columns: repeat(4, 1fr); }
+.impact-cell { padding: 32px 20px; border-right: 1px solid var(--line); text-align: center; }
+.impact-cell:last-child { border-right: none; }
+.impact-num { font-size: clamp(2.8rem, 4.5vw, 4.2rem); font-weight: 600; letter-spacing: -.05em; color: var(--gold-lt); line-height: 1; display: block; }
+.impact-desc { font-size: .8rem; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+@media (max-width: 700px) { .impact-band { grid-template-columns: 1fr 1fr; } .impact-cell { border-right: none; border-bottom: 1px solid var(--line); } .impact-cell:last-child, .impact-cell:nth-last-child(2):nth-child(odd) { border-bottom: none; } }
+
+/* SPORTS GRID */
+.sports-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.sport-card { background: #191919; border: 1px solid #2a2a2a; padding: 26px 22px; border-top: 2px solid transparent; transition: border-top-color .2s; }
+.sport-card:hover { border-top-color: var(--gold); }
+.sport-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.sport-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -.015em; margin-bottom: 7px; }
+.sport-desc { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+@media (max-width: 700px) { .sports-grid { grid-template-columns: 1fr 1fr; } }
 
 /* PAGE HERO (inner pages) */
-.page-hero{padding:72px 0 64px;border-bottom:1px solid var(--border);}
-.page-hero .wrap{max-width:800px;}
+.page-hero { padding: 64px 0 56px; border-bottom: 1px solid var(--line); }
+.page-hero h1 { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 600; letter-spacing: -.055em; line-height: .98; margin-top: 6px; }
 
-/* FOOTER */
-footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 24px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.footer-logo{font-family:var(--font-h);font-size:16px;font-weight:700;}
-.footer-logo span{color:var(--gold);}
-.footer-copy{font-size:12px;color:var(--dim);}
-.footer-links{display:flex;gap:20px;}
-.footer-links a{font-size:12px;color:var(--dim);transition:color 0.15s;}
-.footer-links a:hover{color:var(--muted);}
+/* SISTER + FOOTER */
+.sister-strip { background: var(--ink); border-top: 1px solid var(--line); padding: 20px 24px; text-align: center; font-size: .82rem; color: var(--muted); }
+.sister-strip a { color: var(--gold-lt); font-weight: 600; }
+.site-footer { background: var(--ink); border-top: 1px solid #292929; padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+.footer-brand { font-size: .88rem; font-weight: 600; letter-spacing: .05em; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: .78rem; color: var(--muted); transition: color .15s; }
+.footer-links a:hover { color: var(--white); }
+.footer-copy { font-size: .75rem; color: #555; }
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.reveal.visible{opacity:1;transform:none;}
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.visible { opacity: 1; transform: none; }
 
-/* SISTER STRIP */
-.sister{background:var(--bg);border-top:1px solid var(--border);padding:22px 24px;text-align:center;font-size:13px;color:var(--muted);}
-.sister a{color:var(--gold);font-weight:600;}
-</style>
-<script>
-// Shared scroll reveal
-document.addEventListener('DOMContentLoaded',()=>{
-  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-  // Mark active nav link
-  const path=location.pathname.replace(/\/$/,'');
-  document.querySelectorAll('.nav-links a').forEach(a=>{
-    if(a.getAttribute('href')===path||a.getAttribute('href')===path+'/') a.classList.add('active');
-  });
-});
-</script>
+/* PREVIEW CARDS (home) */
+.preview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+.preview-card { position: relative; overflow: hidden; border-radius: 4px; aspect-ratio: 3/4; display: block; }
+.preview-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.preview-card:hover img { transform: scale(1.04); }
+.preview-ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.1) 55%, transparent 100%); }
+.preview-txt { position: absolute; bottom: 0; left: 0; right: 0; padding: 22px 18px; }
+.preview-lbl { font-size: .68rem; font-weight: 700; color: var(--gold-lt); letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.preview-title { font-size: 1.3rem; font-weight: 600; letter-spacing: -.025em; line-height: 1.15; color: var(--white); margin-bottom: 8px; }
+.preview-link { font-size: .78rem; color: rgba(255,255,255,.55); transition: color .15s; }
+.preview-card:hover .preview-link { color: var(--gold-lt); }
+@media (max-width: 700px) { .preview-grid { grid-template-columns: 1fr; } .preview-card { aspect-ratio: 16/9; } }
 
-<style>
-.coaches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
-.coach-card{background:var(--surface2);overflow:hidden;}
-.coach-img{width:100%;height:300px;object-fit:cover;display:block;transition:transform 0.5s ease;}
-.coach-card:hover .coach-img{transform:scale(1.03);}
-.coach-img-wrap{overflow:hidden;position:relative;}
-.coach-sport{position:absolute;top:14px;right:14px;background:var(--gold);color:#080808;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:4px 12px;}
-.coach-info{padding:22px 22px 26px;}
-.coach-name{font-family:var(--font-h);font-size:20px;font-weight:700;color:var(--text);letter-spacing:0.02em;margin-bottom:8px;}
-.coach-bio{font-size:14px;color:var(--muted);line-height:1.6;}
-@media(max-width:900px){.coaches-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:600px){.coaches-grid{grid-template-columns:1fr;}}
+/* CTA STRIP */
+.cta-strip { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; padding: 52px 0; }
+@media (max-width: 700px) { .cta-strip { grid-template-columns: 1fr; gap: 22px; } }
+.cta-strip h2 { color: var(--white); }
+.cta-strip p { color: var(--muted); margin-top: 12px; max-width: 460px; }
+.cta-btns { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+
+/* REVEAL SCRIPT (inline) */
+
+
 </style>
 </head>
 <body>
-
 <div class="bar">Enrolling for Fall 2027 · Admissions open November 1</div>
-<nav>
-  <a href="/" class="nav-logo">Level Up <span>Prep</span></a>
-  <ul class="nav-links">
+<nav class="site-nav">
+  <a href="/" class="nav-brand">Level Up <span style="color:var(--gold-lt);margin-left:4px;">Prep</span></a>
+  <ul class="nav-links-list">
     <li><a href="/academics/">Academics</a></li>
     <li><a href="/athletics/">Athletics</a></li>
-    <li><a href="/coaches/">Coaches</a></li>
+    <li><a href="/coaches/"class='active'>Coaches</a></li>
     <li><a href="/admissions/">Admissions</a></li>
   </ul>
-  <a href="/admissions/" class="nav-cta">Book free assessment</a>
+  <a href="/admissions/" class="button" style="min-height:40px;padding:10px 18px;font-size:.84rem;">Book assessment</a>
 </nav>
 
-<!-- PAGE HERO -->
-<div class="sec-dk page-hero">
+<div class="page-hero">
   <div class="wrap">
     <span class="eyebrow">The team behind you</span>
-    <h1 class="h1-hero" style="margin-bottom:16px;">Meet the<em style="color:var(--gold);font-style:normal;display:block;">coaches</em></h1>
-    <p class="body-text">Collegiate and professional experience across every sport we offer. Real coaches who have been where your athlete wants to go.</p>
+    <h1>Meet the<br><span style="color:var(--gold-lt);">coaches</span></h1>
+    <p class="section-intro">Collegiate and professional experience across every sport we offer. Real coaches who have been where your athlete wants to go.</p>
   </div>
 </div>
-
-<!-- COACHES GRID -->
-<div class="sec-surf">
-  <div class="wrap pad">
-    <div class="coaches-grid">
-      <div class="coach-card reveal">
-        <div class="coach-img-wrap">
-          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-reid.jpg" alt="Coach Marcus Reid" loading="lazy">
-          <span class="coach-sport">Basketball</span>
-        </div>
-        <div class="coach-info">
-          <div class="coach-name">Coach Marcus Reid</div>
-          <p class="coach-bio">Former D1 assistant coach with 15 years developing elite guards and forwards. His athletes have gone on to play at every level from JUCO to the NBA G-League.</p>
-        </div>
+<section class="section-space" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;" class="reveal">
+      <div class="coach-card" style="width:auto;">
+        <img class="coach-img" src="/assets/prep/coach-reid.jpg" alt="Coach Marcus Reid" loading="lazy">
+        <div class="coach-body"><span class="coach-sport">Basketball</span><div class="coach-name">Coach Marcus Reid</div><p class="coach-bio">Former D1 assistant coach with 15 years developing elite guards and forwards. Athletes have gone on to play at every level from JUCO to the NBA G-League.</p></div>
       </div>
-      <div class="coach-card reveal">
-        <div class="coach-img-wrap">
-          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-chen.jpg" alt="Coach Sarah Chen" loading="lazy">
-          <span class="coach-sport">Volleyball</span>
-        </div>
-        <div class="coach-info">
-          <div class="coach-name">Coach Sarah Chen</div>
-          <p class="coach-bio">All-Conference setter who played four years at the collegiate level before turning to coaching. She specializes in fundamentals, court vision, and game IQ development.</p>
-        </div>
+      <div class="coach-card" style="width:auto;">
+        <img class="coach-img" src="/assets/prep/coach-chen.jpg" alt="Coach Sarah Chen" loading="lazy">
+        <div class="coach-body"><span class="coach-sport">Volleyball</span><div class="coach-name">Coach Sarah Chen</div><p class="coach-bio">All-Conference setter who played four years collegiately. Specializes in fundamentals, court vision, and game IQ development.</p></div>
       </div>
-      <div class="coach-card reveal">
-        <div class="coach-img-wrap">
-          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-foster.jpg" alt="Coach James Foster" loading="lazy">
-          <span class="coach-sport">Football</span>
-        </div>
-        <div class="coach-info">
-          <div class="coach-name">Coach James Foster</div>
-          <p class="coach-bio">10 years coaching youth and prep football across the Coachella Valley. Coach Foster focuses on strength, technique, and developing complete athletes from the ground up.</p>
-        </div>
+      <div class="coach-card" style="width:auto;">
+        <img class="coach-img" src="/assets/prep/coach-foster.jpg" alt="Coach James Foster" loading="lazy">
+        <div class="coach-body"><span class="coach-sport">Football</span><div class="coach-name">Coach James Foster</div><p class="coach-bio">10 years coaching youth and prep football across the Coachella Valley. Focused on strength, technique, and developing complete athletes.</p></div>
       </div>
-      <div class="coach-card reveal">
-        <div class="coach-img-wrap">
-          <img class="coach-img" src="https://pub-BUCKET_URL/prep/coach-torres.jpg" alt="Coach Maria Torres" loading="lazy">
-          <span class="coach-sport">Soccer</span>
-        </div>
-        <div class="coach-info">
-          <div class="coach-name">Coach Maria Torres</div>
-          <p class="coach-bio">Former professional player with experience in multiple leagues. Coach Torres develops complete midfielders and defenders with a technical, game-intelligence-first approach.</p>
-        </div>
+      <div class="coach-card" style="width:auto;">
+        <img class="coach-img" src="/assets/prep/coach-torres.jpg" alt="Coach Maria Torres" loading="lazy">
+        <div class="coach-body"><span class="coach-sport">Soccer</span><div class="coach-name">Coach Maria Torres</div><p class="coach-bio">Former professional player. Develops complete midfielders and defenders with a technical, game-intelligence-first approach.</p></div>
       </div>
-      <div class="coach-card reveal">
-        <div class="coach-img-wrap">
-          <img class="coach-img" src="https://pub-BUCKET_URL/prep/academics.jpg" alt="Coach David Park" loading="lazy">
-          <span class="coach-sport">Baseball</span>
-        </div>
-        <div class="coach-info">
-          <div class="coach-name">Coach David Park</div>
-          <p class="coach-bio">Collegiate pitching coach with a track record of developing D1 arms. Coach Park's program covers mechanics, arm care, mental preparation, and position-specific skill development.</p>
-        </div>
+      <div class="coach-card" style="width:auto;">
+        <img class="coach-img" src="/assets/prep/academics.jpg" alt="Coach David Park" loading="lazy">
+        <div class="coach-body"><span class="coach-sport">Baseball</span><div class="coach-name">Coach David Park</div><p class="coach-bio">Collegiate pitching coach with a track record of developing D1 arms. Arm care, mechanics, mental preparation, and position-specific skill development.</p></div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- CTA -->
-<div class="sec-lt">
-  <div class="wrap pad-sm">
+</section>
+<section class="section-light" style="padding-block:64px;">
+  <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;" class="reveal">
       <div>
-        <span class="eyebrow-dk">Next step</span>
-        <h2 class="h2-dk" style="margin-bottom:12px;">Come meet them in person</h2>
-        <p class="body-text-dk">A free assessment is your chance to meet the coaching staff, see the facility, and ask every question before you commit to anything.</p>
+        <span class="eyebrow">Next step</span>
+        <h2 style="color:var(--ink);">Come meet them in person</h2>
+        <p style="color:#636360;margin-top:12px;max-width:460px;font-size:1rem;line-height:1.7;">A free assessment is your chance to meet the coaching staff, see the facility, and ask every question before you commit to anything.</p>
       </div>
-      <a href="/admissions/" class="btn-primary" style="flex-shrink:0;">Book a free assessment</a>
+      <a href="/admissions/" class="button" style="flex-shrink:0;">Book a free assessment</a>
     </div>
   </div>
-</div>
-
-<div class="sister">
-  A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a>
-</div>
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">Level Up <span>Prep</span></div>
-    <div class="footer-links">
-      <a href="/academics/">Academics</a>
-      <a href="/athletics/">Athletics</a>
-      <a href="/coaches/">Coaches</a>
-      <a href="/admissions/">Admissions</a>
-    </div>
-    <div class="footer-copy">© 2026 Level Up Prep · Indio, California</div>
-  </div>
+</section>
+<div class="sister-strip">A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a> &middot; The name behind the desert&rsquo;s best players</div>
+<footer class="site-footer">
+  <div class="footer-brand">Level Up <span style="color:var(--gold-lt);">Prep</span></div>
+  <nav class="footer-links">
+    <a href="/academics/">Academics</a><a href="/athletics/">Athletics</a>
+    <a href="/coaches/">Coaches</a><a href="/admissions/">Admissions</a>
+  </nav>
+  <div class="footer-copy">&copy; 2026 Level Up Prep &middot; Indio, California</div>
 </footer>
-</body>
-</html>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target);}}),{threshold:0.1});
+  document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+});
+</script>
+</body></html>
