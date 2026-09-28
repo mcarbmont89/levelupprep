@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Level Up Prep | Private School & Sports Academy · Indio, CA</title>
+<title>Level Up Prep Academy | Enrolling 2028</title>
+<meta name="description" content="Level Up Prep Academy — a complete student athlete pathway for boys and girls grades 6-12 in Indio, California. Enrolling for 2028.">
 <link rel="icon" type="image/png" href="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/logo.png">
-<meta name="description" content="A private school and holistic sports academy for grades 5–12 in Indio, California. Rigorous academics. Elite athletic development. Sister brand to Level Up Hoops Academy.">
 <style>
 /* ── LEVEL UP PREP — tokens idénticos a Hoops, naranja → dorado ── */
 :root {
@@ -197,226 +197,287 @@ textarea { resize: vertical; }
 /* REVEAL SCRIPT (inline) */
 
 
-.hero{position:relative;height:100svh;min-height:580px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.85) 100%);}
-.hero-content{position:relative;z-index:10;max-width:740px;padding:0 24px;}
-.hero h1{font-size:clamp(3.2rem,7vw,6rem);font-weight:600;letter-spacing:-.06em;line-height:.95;margin-bottom:20px;}
-.hero h1 em{color:var(--gold-lt);font-style:normal;display:block;}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 28px;line-height:1.68;}
-.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-.hero-foot{position:absolute;bottom:0;left:0;right:0;z-index:10;border-top:1px solid rgba(255,255,255,.1);background:rgba(17,17,17,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:11px 40px;}
-.hero-foot-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;font-size:.74rem;color:rgba(255,255,255,.38);letter-spacing:.05em;}
-.counter{font-size:clamp(2.6rem,4vw,4rem);font-weight:600;letter-spacing:-.05em;color:var(--gold-lt);line-height:1;display:block;}
+/* STATS BAND */
+.stats-band{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.stat-cell{text-align:center;padding:28px 16px;border-right:1px solid var(--line);}
+.stat-cell:last-child{border-right:none;}
+.stat-big{display:block;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--gold-lt);letter-spacing:-.03em;line-height:1;}
+.stat-lbl{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:6px;display:block;}
+/* CARD GRID */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
+.card-item{background:var(--surface,#191919);border:1px solid var(--line);border-radius:8px;padding:28px;}
+.card-num{font-size:.72rem;font-weight:700;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.card-h{font-size:1.15rem;font-weight:700;letter-spacing:-.015em;margin-bottom:8px;text-transform:uppercase;}
+.card-p{font-size:.88rem;color:var(--muted);line-height:1.6;}
+/* PATHWAY */
+.pathway{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:28px;}
+.path-step{background:#fff;border:1px solid #ddd;border-radius:6px;padding:14px 18px;font-weight:700;font-size:.88rem;text-transform:uppercase;color:var(--ink);}
+.path-arrow{color:var(--gold-lt);font-size:1.4rem;}
+/* TWO COL PROGRAMS */
+.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;}
+.prog-card{background:#121212;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+.prog-head{padding:28px;background:linear-gradient(135deg,#1a1a1a,#2d1a05);}
+.prog-head h3{font-size:1.8rem;font-weight:700;text-transform:uppercase;margin:6px 0 0;letter-spacing:-.02em;}
+.prog-body{padding:22px;}
+.prog-level{padding:14px 0;border-bottom:1px solid #2a2a2a;}
+.prog-level:last-child{border:none;}
+.prog-level strong{display:block;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;}
+.prog-level span{font-size:.82rem;color:var(--muted);}
+/* FEATURES GRID */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;}
+.feat-item{background:#191919;border:1px solid var(--line);border-radius:6px;padding:20px 18px;}
+.feat-item strong{display:block;font-size:.9rem;font-weight:700;letter-spacing:-.01em;margin-bottom:5px;}
+.feat-item span{font-size:.8rem;color:var(--muted);line-height:1.5;}
+/* EDUCATION PROVIDERS */
+.edu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+.edu-item{background:#191919;border:1px solid var(--line);border-radius:6px;padding:18px;}
+.edu-item strong{display:block;font-size:.88rem;font-weight:700;margin-bottom:5px;}
+.edu-item span{font-size:.78rem;color:var(--muted);line-height:1.5;}
+/* ORANGE CTA BAND */
+.orange-band{background:var(--gold);color:#080808;border-radius:10px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.orange-band h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;letter-spacing:-.03em;text-transform:uppercase;margin:0 0 8px;}
+.orange-band p{color:rgba(8,8,8,0.65);font-size:1rem;margin:0;}
+.orange-band .btn-dk{background:#080808;color:#fff;padding:14px 24px;font-family:Arial,sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--radius);display:inline-block;transition:background .15s;flex-shrink:0;}
+.orange-band .btn-dk:hover{background:#222;}
+/* INTEREST FORM */
+.int-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:860px;}
+.int-form input,.int-form select,.int-form textarea{width:100%;background:#181818;border:1px solid var(--line);color:#fff;padding:14px;border-radius:5px;font:inherit;font-size:.9rem;outline:none;transition:border-color .15s;}
+.int-form input:focus,.int-form select:focus,.int-form textarea:focus{border-color:var(--gold);}
+.int-form select option{background:#181818;}
+.int-form textarea{grid-column:1/-1;min-height:110px;resize:vertical;}
+.int-form .full{grid-column:1/-1;}
+.int-form .submit-btn{grid-column:1/-1;background:var(--gold);color:#080808;border:none;padding:16px;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:var(--radius);cursor:pointer;transition:background .15s;}
+.int-form .submit-btn:hover{background:var(--gold-lt);}
+.disclaimer{color:#555;font-size:.78rem;line-height:1.55;margin-top:18px;max-width:860px;}
+/* RESPONSIVE */
+@media(max-width:900px){.card-grid,.prog-grid,.feat-grid,.edu-grid{grid-template-columns:1fr 1fr;}.orange-band{flex-direction:column;align-items:flex-start;}}
+@media(max-width:600px){.stats-band{grid-template-columns:1fr 1fr;}.card-grid,.prog-grid,.feat-grid,.edu-grid{grid-template-columns:1fr;}.int-form{grid-template-columns:1fr;}.int-form .full,.int-form textarea{grid-column:auto;}.orange-band{padding:28px 24px;}}
 
 </style>
 </head>
 <body>
-<div class="bar">Enrolling for Fall 2027 · Admissions open November 1</div>
+<div class="bar">Enrolling for 2028 · Interest List Now Open</div>
 <nav class="site-nav">
   <a href="/" class="nav-brand" style="display:flex;align-items:center;gap:10px;"><img src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/logo.png" alt="Level Up Prep" style="width:38px;height:38px;object-fit:contain;">Level Up <span style="color:var(--gold-lt);margin-left:4px;">Prep</span></a>
   <ul class="nav-links-list">
-    <li><a href="/academics/">Academics</a></li>
-    <li><a href="/athletics/">Athletics</a></li>
-    <li><a href="/coaches/">Coaches</a></li>
-    <li><a href="/admissions/">Admissions</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#middle">Middle School</a></li>
+    <li><a href="#hs">High School</a></li>
+    <li><a href="#dev">Development</a></li>
   </ul>
-  <a href="/admissions/" class="button" style="min-height:40px;padding:10px 18px;font-size:.84rem;">Book assessment</a>
+  <a href="#interest" class="button" style="min-height:40px;padding:10px 18px;font-size:.84rem;">2028 Interest List</a>
 </nav>
 
-<section class="hero">
-  <video autoplay muted playsinline loop aria-label="Students learning in a classroom">
-    <source src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/classroom-hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-ov"></div>
-  <div class="hero-content">
-    <span class="eyebrow">Indio, California &middot; Grades 5&ndash;12 &middot; Private school</span>
-    <h1>Exceptional students<em>Built for more</em></h1>
-    <p class="hero-sub">Where rigorous academics and elite athletic development meet. A private school and sports academy for student-athletes ready for both.</p>
-    <div class="hero-actions">
-      <a href="/admissions/" class="button">Book a free assessment</a>
-      <a href="/academics/" class="button button-outline">See the program</a>
-    </div>
-  </div>
-  <div class="hero-foot">
-    <div class="hero-foot-inner">
-      <span>Level Up Prep</span>
-      <span>Building scholars. Building athletes. Building character.</span>
-      <span>Scroll &#x2193;</span>
+<!-- HERO -->
+<section style="min-height:680px;display:flex;align-items:center;background:linear-gradient(90deg,#000 0%,#000d 52%,#0006),radial-gradient(circle at 85% 30%,#3a1e04,#111 48%,#080808 75%);padding:80px 0;">
+  <div class="wrap">
+    <span class="eyebrow">Indio, California &middot; Enrolling for 2028</span>
+    <h1 style="font-size:clamp(3rem,8vw,6.5rem);font-weight:700;letter-spacing:-.055em;line-height:.9;text-transform:uppercase;margin:18px 0 22px;max-width:900px;">Built for the<br><span style="color:var(--gold-lt);">next level.</span></h1>
+    <p style="max-width:680px;color:#bbb;font-size:1.1rem;line-height:1.65;margin-bottom:28px;">Level Up Prep Academy is building a complete student athlete pathway for boys and girls in grades 6 through 12, bringing education, basketball development, performance training, study hall and competitive basketball into one student athlete experience.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="#interest" class="button">Join 2028 Interest List</a>
+      <a href="#path" class="button button-outline" style="color:#fff;border-color:#555;">Explore the Pathway</a>
     </div>
   </div>
 </section>
 
-<!-- IMPACT BAND -->
-<div class="section-surf" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="wrap" style="padding-block:52px;">
-    <p class="eyebrow" style="text-align:center;margin-bottom:28px;">The Level Up track record &mdash; from Level Up Hoops Academy</p>
-    <div class="impact-band">
-      <div class="impact-cell reveal" data-target="94" data-suffix="%">
-        <span class="counter impact-num">0</span>
-        <p class="impact-desc">placed at their first-choice high school or college</p>
-      </div>
-      <div class="impact-cell reveal" data-target="3.4" data-decimal="1">
-        <span class="counter impact-num">0</span>
-        <p class="impact-desc">average GPA during training</p>
-      </div>
-      <div class="impact-cell reveal" data-target="12" data-suffix="+">
-        <span class="counter impact-num">0</span>
-        <p class="impact-desc">alumni playing collegiate or professional</p>
-      </div>
-      <div class="impact-cell reveal" data-target="10" data-suffix="+">
-        <span class="counter impact-num">0</span>
-        <p class="impact-desc">years developing the Valley&rsquo;s best student-athletes</p>
-      </div>
-    </div>
-    <p style="text-align:center;font-size:.72rem;color:#555;margin-top:24px;font-style:italic;">Level Up Hoops Academy alumni outcomes 2014&ndash;2026. Level Up Prep opens Fall 2027.</p>
-  </div>
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stat-cell"><span class="stat-big">6&ndash;12</span><span class="stat-lbl">Grades</span></div>
+  <div class="stat-cell"><span class="stat-big">Boys</span><span class="stat-lbl">Basketball</span></div>
+  <div class="stat-cell"><span class="stat-big">Girls</span><span class="stat-lbl">Basketball</span></div>
+  <div class="stat-cell"><span class="stat-big">2028</span><span class="stat-lbl">Enrollment</span></div>
 </div>
 
-<!-- ACADEMICS PREVIEW -->
-<section class="section-light section-space">
+<!-- ONE DEVELOPMENT SYSTEM -->
+<section id="path" style="padding:80px 0;border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="two-col">
-      <div class="col-img reveal">
-        <img src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/academics.jpg" alt="Students in a Level Up Prep classroom" loading="lazy">
+    <span class="eyebrow">One Development System</span>
+    <h2 class="h2" style="margin-bottom:14px;">From middle school to<br>college preparation.</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:640px;line-height:1.7;">A student athlete pathway built around academics, consistent basketball development, performance training, accountability and competition.</p>
+    <div class="card-grid">
+      <div class="card-item reveal"><div class="card-num">01</div><div class="card-h">Academics</div><p class="card-p">Academic accountability, study time, grade monitoring and preparation for high school and college.</p></div>
+      <div class="card-item reveal"><div class="card-num">02</div><div class="card-h">Development</div><p class="card-p">Shooting, finishing, ball handling, passing, defense, rebounding, decision making and basketball IQ.</p></div>
+      <div class="card-item reveal"><div class="card-num">03</div><div class="card-h">Performance</div><p class="card-p">Strength, speed, agility, mobility, conditioning and recovery integrated into player development.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAY -->
+<section class="sec-lt" style="padding:64px 0;">
+  <div class="wrap">
+    <span class="eyebrow-dk">The Level Up Pathway</span>
+    <h2 class="h2-dk" style="margin-bottom:8px;">Grow through the program.</h2>
+    <div class="pathway">
+      <div class="path-step">6th Grade</div><div class="path-arrow">&#x2192;</div>
+      <div class="path-step">7th Grade</div><div class="path-arrow">&#x2192;</div>
+      <div class="path-step">8th Grade</div><div class="path-arrow">&#x2192;</div>
+      <div class="path-step">Freshman</div><div class="path-arrow">&#x2192;</div>
+      <div class="path-step">JV</div><div class="path-arrow">&#x2192;</div>
+      <div class="path-step">Varsity</div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section id="academics" style="padding:80px 0;background:#0d0d0d;border-top:1px solid var(--line);">
+  <div class="wrap">
+    <span class="eyebrow">Academic Pathway</span>
+    <h2 class="h2" style="margin-bottom:14px;">Education + Elite Development</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:720px;line-height:1.7;">Level Up Prep Academy is designed to bring serious student athletes into one development environment while allowing families to use participating education providers for their academic program.</p>
+    <div class="card-grid" style="margin-top:36px;">
+      <div class="card-item reveal"><div class="card-num">Academics</div><div class="card-h">Education Provider</div><p class="card-p">Students complete their academic coursework through the education provider selected by their family, subject to that provider&rsquo;s enrollment requirements and policies.</p></div>
+      <div class="card-item reveal"><div class="card-num">Level Up Prep</div><div class="card-h">Student Athlete Environment</div><p class="card-p">Level Up Prep provides the in-person development environment including basketball training, performance, study hall, accountability, film and team preparation.</p></div>
+      <div class="card-item reveal"><div class="card-num">Competition</div><div class="card-h">Basketball Pathway</div><p class="card-p">Student athletes can compete through age and grade appropriate Level Up teams and planned Prep basketball teams as the program expands.</p></div>
+    </div>
+    <div style="margin-top:56px;">
+      <span class="eyebrow">Education Options</span>
+      <h2 class="h2" style="font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:12px;">Participating Education Providers</h2>
+      <p style="color:var(--muted);font-size:1rem;max-width:680px;line-height:1.7;">Families may have education options through the following providers. Enrollment, funding eligibility, curriculum and program requirements are determined by each education provider.</p>
+      <div class="edu-grid reveal">
+        <div class="edu-item"><strong>Mission Vista Academy</strong><span>Education provider option for eligible participating families.</span></div>
+        <div class="edu-item"><strong>BEST Academy</strong><span>Education provider option for eligible participating families.</span></div>
+        <div class="edu-item"><strong>Pacific Coast Academy</strong><span>Education provider option for eligible participating families.</span></div>
+        <div class="edu-item"><strong>EPIC California Academy</strong><span>Education provider option for eligible participating families.</span></div>
       </div>
-      <div class="reveal">
-        <span class="eyebrow">Grades 5&ndash;12</span>
-        <h2>Rigorous<br>academics</h2>
-        <p class="section-intro">Small, interactive classrooms led by credentialed teachers. Academics run 8&nbsp;AM to 1&nbsp;PM daily &mdash; leaving every afternoon for focused athletic development.</p>
-        <div class="stat-row" style="margin-bottom:28px;">
-          <div><div class="stat-num">8:1</div><div class="stat-label">Student / teacher ratio</div></div>
-          <div><div class="stat-num">85%</div><div class="stat-label">Qualify for Honors or AP</div></div>
-          <div><div class="stat-num">95%</div><div class="stat-label">First-choice placement</div></div>
+      <p class="disclaimer">Education providers are separate organizations. Availability, enrollment, vendor funding and eligibility are subject to each provider&rsquo;s current policies. Families should confirm academic enrollment and available educational funding directly with their selected provider.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MIDDLE SCHOOL -->
+<section id="middle" style="padding:80px 0;border-top:1px solid var(--line);">
+  <div class="wrap">
+    <span class="eyebrow">Grades 6 Through 8</span>
+    <h2 class="h2" style="margin-bottom:14px;">Middle School Prep</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:680px;line-height:1.7;">Middle school student athletes are part of Level Up Prep Academy. Competition will be organized through age and grade appropriate teams, club and AAU opportunities, independent games and other eligible competition.</p>
+    <div class="card-grid">
+      <div class="card-item reveal"><div class="card-num">6th Grade</div><div class="card-h">Build the foundation</div><p class="card-p">Academics, fundamentals, movement, strength foundations, basketball IQ and competitive team experience.</p></div>
+      <div class="card-item reveal"><div class="card-num">7th Grade</div><div class="card-h">Develop the player</div><p class="card-p">Advanced fundamentals, performance development, film study, decision making and competitive basketball.</p></div>
+      <div class="card-item reveal"><div class="card-num">8th Grade</div><div class="card-h">Prepare for high school</div><p class="card-p">Advanced development, strength and performance, basketball IQ, film study and high school preparation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGH SCHOOL -->
+<section id="hs" style="padding:80px 0;background:#0d0d0d;border-top:1px solid var(--line);">
+  <div class="wrap">
+    <span class="eyebrow">Grades 9 Through 12</span>
+    <h2 class="h2" style="margin-bottom:14px;">High School Prep Basketball</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:680px;line-height:1.7;">The planned high school pathway provides developmental levels leading to Varsity basketball and preparation for opportunities beyond high school.</p>
+    <div class="prog-grid">
+      <div class="prog-card reveal">
+        <div class="prog-head"><span class="eyebrow">Program</span><h3>Boys Basketball</h3></div>
+        <div class="prog-body">
+          <div class="prog-level"><strong>Freshman</strong><span>High school development and preparation.</span></div>
+          <div class="prog-level"><strong>Junior Varsity</strong><span>Advanced development and preparation for Varsity.</span></div>
+          <div class="prog-level"><strong>Varsity</strong><span>Highest competitive level with college preparation and exposure focus.</span></div>
         </div>
-        <a href="/academics/" class="button button-dk">Learn about academics &#x2192;</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PHILOSOPHY PREVIEW -->
-<section class="section-space" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="two-col rev">
-      <div class="col-img reveal">
-        <img src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-torres.jpg" alt="Student athlete in training" loading="lazy">
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Our philosophy</span>
-        <h2>Education for the whole student</h2>
-        <p class="section-intro">Our mission is to help students grow into better humans as well as athletes and scholars &mdash; emerging with the maturity, empathy, and discipline to become engaged leaders.</p>
-        <div class="pillar-grid" style="margin-bottom:28px;">
-          <div class="pillar"><div class="pillar-name">Academics</div><div class="pillar-desc">Rigorous, credentialed, college-prep.</div></div>
-          <div class="pillar"><div class="pillar-name">Physical Training</div><div class="pillar-desc">Elite facilities and coaching.</div></div>
-          <div class="pillar"><div class="pillar-name">Mental Resilience</div><div class="pillar-desc">Discipline, focus, and mindset.</div></div>
-          <div class="pillar"><div class="pillar-name">Social Growth</div><div class="pillar-desc">Character, leadership, community.</div></div>
+      <div class="prog-card reveal">
+        <div class="prog-head"><span class="eyebrow">Program</span><h3>Girls Basketball</h3></div>
+        <div class="prog-body">
+          <div class="prog-level"><strong>Freshman</strong><span>High school development and preparation.</span></div>
+          <div class="prog-level"><strong>Junior Varsity</strong><span>Advanced development and preparation for Varsity.</span></div>
+          <div class="prog-level"><strong>Varsity</strong><span>Highest competitive level with college preparation and exposure focus.</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ATHLETICS PREVIEW -->
-<section class="section-light section-space">
+<!-- DEVELOPMENT -->
+<section id="dev" style="padding:80px 0;border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="two-col">
-      <div class="col-img reveal">
-        <img src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-foster.jpg" alt="Athletes training at Level Up Prep" loading="lazy">
-      </div>
-      <div class="reveal">
-        <span class="eyebrow">Every afternoon</span>
-        <h2>Elite athletics built around your game</h2>
-        <p class="section-intro">Sport-specific development every afternoon coached by veterans with collegiate and professional experience. Basketball, volleyball, football, soccer, and baseball.</p>
-        <a href="/athletics/" class="button button-dk">See the sports programs &#x2192;</a>
-      </div>
+    <span class="eyebrow">Student Athlete Experience</span>
+    <h2 class="h2" style="margin-bottom:14px;">More than games.</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:560px;line-height:1.7;">Level Up Prep is designed around development, accountability and preparation.</p>
+    <div class="feat-grid reveal">
+      <div class="feat-item"><strong>Basketball Skills</strong><span>Consistent individual player development.</span></div>
+      <div class="feat-item"><strong>Team Practice</strong><span>Offensive and defensive concepts.</span></div>
+      <div class="feat-item"><strong>Performance</strong><span>Strength, speed, agility and conditioning.</span></div>
+      <div class="feat-item"><strong>Film Study</strong><span>Learn to see and understand the game.</span></div>
+      <div class="feat-item"><strong>Study Hall</strong><span>Structured academic accountability.</span></div>
+      <div class="feat-item"><strong>Evaluations</strong><span>Track development and improvement.</span></div>
+      <div class="feat-item"><strong>Recovery</strong><span>Build sustainable training habits.</span></div>
+      <div class="feat-item"><strong>College Prep</strong><span>Education around recruiting and next level opportunities.</span></div>
     </div>
   </div>
 </section>
 
-<!-- COACHES PREVIEW -->
-<section class="section-space" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+<!-- ORANGE CTA -->
+<section style="padding:80px 0;border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px;flex-wrap:wrap;gap:16px;">
+    <div class="orange-band reveal">
       <div>
-        <span class="eyebrow">The team behind you</span>
-        <h2>Meet the coaches</h2>
+        <span style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(8,8,8,0.55);">Coming 2028</span>
+        <h2>One school. One culture.<br>One pathway.</h2>
+        <p>Building a place where boys and girls can learn, train, compete and prepare for what comes next.</p>
       </div>
-      <a href="/coaches/" class="text-link gold">See all coaches &#x2192;</a>
-    </div>
-    <p class="section-intro reveal">Collegiate and professional experience across every sport we offer. Real coaches who have been where your athlete wants to go.</p>
-    <div class="coaches-scroll reveal">
-      <div class="coach-card">
-        <img class="coach-img" src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-reid.jpg" alt="Coach Marcus Reid" loading="lazy">
-        <div class="coach-body"><span class="coach-sport">Basketball</span><div class="coach-name">Coach Marcus Reid</div><p class="coach-bio">Former D1 assistant coach with 15 years developing elite guards and forwards.</p></div>
-      </div>
-      <div class="coach-card">
-        <img class="coach-img" src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-chen.jpg" alt="Coach Sarah Chen" loading="lazy">
-        <div class="coach-body"><span class="coach-sport">Volleyball</span><div class="coach-name">Coach Sarah Chen</div><p class="coach-bio">All-Conference setter specializing in fundamentals and game IQ.</p></div>
-      </div>
-      <div class="coach-card">
-        <img class="coach-img" src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-foster.jpg" alt="Coach James Foster" loading="lazy">
-        <div class="coach-body"><span class="coach-sport">Football</span><div class="coach-name">Coach James Foster</div><p class="coach-bio">10 years coaching youth and prep football focused on strength and technique.</p></div>
-      </div>
-      <div class="coach-card">
-        <img class="coach-img" src="https://pub-7a8b35f6b2cf4f16beaa74158248922e.r2.dev/prep/coach-torres.jpg" alt="Coach Maria Torres" loading="lazy">
-        <div class="coach-body"><span class="coach-sport">Soccer</span><div class="coach-name">Coach Maria Torres</div><p class="coach-bio">Former professional player developing complete midfielders and defenders.</p></div>
-      </div>
-    </div>
-    <div class="scroll-controls reveal">
-      <button class="scroll-btn" onclick="document.querySelector('.coaches-scroll').scrollBy({left:-280,behavior:'smooth'})">&#8592;</button>
-      <button class="scroll-btn" onclick="document.querySelector('.coaches-scroll').scrollBy({left:280,behavior:'smooth'})">&#8594;</button>
+      <a href="#interest" class="btn-dk">Request Information</a>
     </div>
   </div>
 </section>
 
-<!-- ADMISSIONS CTA -->
-<section class="section-light">
+<!-- INTEREST FORM -->
+<section id="interest" style="padding:80px 0;background:#101010;border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="cta-strip reveal">
-      <div>
-        <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(198,138,0,.12);border:1px solid rgba(198,138,0,.3);padding:7px 14px;border-radius:3px;font-size:.78rem;color:var(--gold-lt);font-weight:600;letter-spacing:.04em;margin-bottom:14px;">Admissions open November 1, 2026</div>
-        <h2 style="color:var(--ink);">Your student was built for more</h2>
-        <p style="color:#636360;margin-top:12px;max-width:480px;">Join a community where academics and athletics push each other forward. Start with a free assessment.</p>
-      </div>
-      <div class="cta-btns">
-        <a href="/admissions/" class="button">Book a free assessment</a>
-        <a href="/admissions/" class="button button-outline" style="color:var(--ink);border-color:#aaa;">See the process &#x2192;</a>
-      </div>
-    </div>
+    <span class="eyebrow">Enrolling for 2028</span>
+    <h2 class="h2" style="margin-bottom:14px;">Join the interest list.</h2>
+    <p style="color:var(--muted);font-size:1rem;max-width:560px;line-height:1.7;margin-bottom:36px;">Families interested in future enrollment can submit student athlete information below.</p>
+    <form class="int-form" onsubmit="handleInterest(event)">
+      <input required placeholder="Student First Name" name="firstName">
+      <input required placeholder="Student Last Name" name="lastName">
+      <input required placeholder="Parent / Guardian Name" name="parentName">
+      <input required type="email" placeholder="Parent Email" name="parentEmail">
+      <input required type="tel" placeholder="Parent Phone" name="parentPhone">
+      <select required name="grade"><option value="">Grade Entering in 2028</option><option>6th Grade</option><option>7th Grade</option><option>8th Grade</option><option>9th Grade</option><option>10th Grade</option><option>11th Grade</option><option>12th Grade</option></select>
+      <select required name="program"><option value="">Basketball Program</option><option>Boys Basketball</option><option>Girls Basketball</option></select>
+      <select name="eduProvider"><option value="">Education Provider / Interested In</option><option>Mission Vista Academy</option><option>BEST Academy</option><option>Pacific Coast Academy</option><option>EPIC California Academy</option><option>Not Sure Yet</option></select>
+      <input placeholder="Current School" name="currentSchool">
+      <input placeholder="Height" name="height">
+      <input placeholder="Primary Position" name="position">
+      <input placeholder="Current Team" name="currentTeam">
+      <input class="full" type="url" placeholder="Highlight Film Link (Optional)" name="filmLink">
+      <textarea placeholder="Tell us about the student athlete, academic goals and basketball goals" name="notes"></textarea>
+      <button type="submit" class="submit-btn">Join the 2028 Interest List</button>
+    </form>
+    <p class="disclaimer">By submitting this form you agree to be contacted by Level Up Prep Academy regarding enrollment information. Your information will not be shared with third parties.</p>
   </div>
 </section>
 
 <script>
-// Counter animation
-function animateCounter(el){
-  const target=parseFloat(el.dataset.target);
-  const isDecimal=el.dataset.decimal==='1';
-  const suffix=el.dataset.suffix||'';
-  const dur=1600;const start=performance.now();
-  const tick=now=>{
-    const p=Math.min((now-start)/dur,1);
-    const ease=1-Math.pow(1-p,3);
-    const val=target*ease;
-    el.querySelector('.counter').textContent=(isDecimal?val.toFixed(1):Math.floor(val))+suffix;
-    if(p<1)requestAnimationFrame(tick);
-    else el.querySelector('.counter').textContent=(isDecimal?target.toFixed(1):target)+suffix;
-  };
-  requestAnimationFrame(tick);
+async function handleInterest(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.submit-btn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  const data = Object.fromEntries(new FormData(e.target));
+  try {
+    const res = await fetch('/api/prep/inquiries', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Idempotency-Key':crypto.randomUUID()},
+      body: JSON.stringify(data)
+    });
+    if (res.ok || res.status === 201) {
+      e.target.innerHTML = '<div style="text-align:center;padding:48px 0;"><div style="font-size:3rem;margin-bottom:16px;">&#x2713;</div><h3 style="font-family:Arial,sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:8px;">You\'re on the list.</h3><p style="color:var(--muted);">We\'ll be in touch as we get closer to 2028 enrollment.</p></div>';
+    } else {
+      btn.textContent = 'Something went wrong, please try again'; btn.disabled = false;
+    }
+  } catch { btn.textContent = 'Could not connect, please try again'; btn.disabled = false; }
 }
-const cObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);cObs.unobserve(e.target);}}),{threshold:0.3});
-document.querySelectorAll('.impact-cell[data-target]').forEach(el=>cObs.observe(el));
 </script>
+
 <div class="sister-strip">A sister brand to <a href="https://leveluphoopsacademy.com" target="_blank" rel="noopener">Level Up Hoops Academy</a> &middot; The name behind the desert&rsquo;s best players</div>
 <footer class="site-footer">
   <div class="footer-brand">Level Up <span style="color:var(--gold-lt);">Prep</span></div>
   <nav class="footer-links">
-    <a href="/academics/">Academics</a>
-    <a href="/athletics/">Athletics</a>
-    <a href="/coaches/">Coaches</a>
-    <a href="/admissions/">Admissions</a>
+    <a href="#academics">Academics</a>
+    <a href="#middle">Middle School</a>
+    <a href="#hs">High School</a>
+    <a href="#dev">Development</a>
+    <a href="#interest">Interest List</a>
   </nav>
-  <div class="footer-copy">&copy; 2026 Level Up Prep &middot; Indio, California</div>
+  <div class="footer-copy">&copy; 2026 Level Up Prep &middot; Indio, California &middot; Grades 6&ndash;12</div>
 </footer>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
